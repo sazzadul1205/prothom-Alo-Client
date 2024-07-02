@@ -47,7 +47,7 @@ const Navbar2 = () => {
   return (
     <div className="bg-white border-b-2 w-full h-16 text-black border-black">
       <div className="max-w-screen-xl mx-auto">
-        <div className="navbar fixed z-10 justify-between bg-white text-black max-w-screen-xl mx-auto p-0 border-b-2 border-black">
+        <div className="navbar z-10 justify-between bg-white text-black max-w-screen-xl mx-auto p-0 border-b-2 border-black">
           <div className="navbar-center flex justify-center lg:flex">
             <ul className="gap-2 menu-horizontal px-1 pt-2">{NavLinks}</ul>
           </div>

@@ -1,30 +1,34 @@
 import React from "react";
+import icon from "../../../assets/Footer/com.png";
+
+import IconsAndPlay from "./IconsAndPlay";
+import FMore from "./FMore";
+import End from "./End";
 
 const Footer = () => {
   return (
-    <div>
-      <footer className="footer bg-neutral text-neutral-content p-10">
-        <nav>
-          <h6 className="footer-title">Services</h6>
-          <a className="link link-hover">Branding</a>
-          <a className="link link-hover">Design</a>
-          <a className="link link-hover">Marketing</a>
-          <a className="link link-hover">Advertisement</a>
-        </nav>
-        <nav>
-          <h6 className="footer-title">Company</h6>
-          <a className="link link-hover">About us</a>
-          <a className="link link-hover">Contact</a>
-          <a className="link link-hover">Jobs</a>
-          <a className="link link-hover">Press kit</a>
-        </nav>
-        <nav>
-          <h6 className="footer-title">Legal</h6>
-          <a className="link link-hover">Terms of use</a>
-          <a className="link link-hover">Privacy policy</a>
-          <a className="link link-hover">Cookie policy</a>
-        </nav>
-      </footer>
+    <div className="bg-white border-b w-full h-{123px} text-black">
+      <div className="max-w-screen-xl mx-auto">
+        <div className="border-t border-b ">
+          <div>
+            <img src={icon} className="py-5" />
+          </div>
+          <div className="grid grid-cols-6 gap-4 py-5 font-light">
+            <div>নাগরিক সংবাদ</div>
+            <div>কিশোর আলো</div>
+            <div>বিজ্ঞানচিন্তা</div>
+            <div>প্রথম আলো ট্রাস্ট</div>
+            <div>বন্ধুসভা</div>
+            <div>চিরন্তন ১৯৭১</div>
+            <div>ইপেপার</div>
+            <div>প্রথমা</div>
+            <div>মোবাইল ভ্যাস</div>
+          </div>
+        </div>
+        <IconsAndPlay></IconsAndPlay>
+        <FMore></FMore>
+        <End></End>
+      </div>
     </div>
   );
 };
