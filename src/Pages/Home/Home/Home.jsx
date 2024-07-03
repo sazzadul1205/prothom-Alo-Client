@@ -7,6 +7,9 @@ import ImgNews2 from '../ImgNews2/ImgNews2';
 import ForMe from '../ForMe/ForMe';
 import Sports from '../Sports/Sports';
 import Bangladesh from '../Bangladesh/Bangladesh';
+import World from '../World/World';
+import Entertainment from '../Entertainment/Entertainment';
+import Living from '../Living/Living';
 
 const Home = () => {
     return (
@@ -19,6 +22,9 @@ const Home = () => {
             <ForMe></ForMe>
             <Sports></Sports>
             <Bangladesh></Bangladesh>
+            <World></World>
+            <Entertainment></Entertainment>
+            <Living></Living>
         </div>
     );
 };
