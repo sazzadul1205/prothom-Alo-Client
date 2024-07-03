@@ -1,4 +1,3 @@
-import React from "react";
 import { FaGreaterThan } from "react-icons/fa";
 import def from "../../../assets/News/Default.png";
 
@@ -62,7 +61,7 @@ const Entertainment = () => {
         <div className="grid grid-cols-3">
           {/* Left Section */}
           <div className="border-r border-black py-2">
-            {EntLeftNews.map((item, index) => (
+            {EntLeftNews.map((item) => (
               <div key={item.id} className="mt-2 border-b px-2 py-5">
                 <div className="flex items-center justify-between">
                   <div className="flex-1">
@@ -103,7 +102,7 @@ const Entertainment = () => {
           </div>
           {/* Right Section */}
           <div className=" border-l-3 border-black py-2">
-            {EntRightNews.map((item, index) => (
+            {EntRightNews.map((item) => (
               <div key={item.id} className="mt-2 border-b px-2 py-5">
                 <div className="flex items-center justify-between">
                   <div className="flex-1">

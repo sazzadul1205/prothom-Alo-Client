@@ -1,4 +1,3 @@
-import React from "react";
 import def from "../../../../assets/News/Default.png"
 
 const BanLeftNews = [
@@ -106,7 +105,7 @@ const BanNews = () => {
       {/* Left */}
       <div>
         <div className="w-[300px] border-l-3 border-black py-2">
-          {BanRightNews.map((item, index) => (
+          {BanRightNews.map((item) => (
             <div key={item.id} className="mt-2 border-b px-2 py-5">
               <div className="flex items-center justify-between">
                 <div className="flex-1">

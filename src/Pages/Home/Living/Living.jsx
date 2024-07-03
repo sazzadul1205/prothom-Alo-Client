@@ -1,4 +1,3 @@
-import React from "react";
 import def from "../../../assets/News/Default.png";
 import { FaGreaterThan } from "react-icons/fa";
 

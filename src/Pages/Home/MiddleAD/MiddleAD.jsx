@@ -1,4 +1,3 @@
-import React from "react";
 import add from "../../../assets/TopAds/Add2.webp";
 
 const MiddleAD = () => {
