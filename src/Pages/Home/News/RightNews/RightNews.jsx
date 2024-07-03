@@ -29,7 +29,10 @@ const RightNews = () => {
 
   return (
     <div className="w-1/4">
-      <div> <img src={def} className="w-{300px} h-{250px}" /></div>
+      <div>
+        {" "}
+        <img src={def} className="w-{300px} h-{250px}" />
+      </div>
       {newsItems.map((item, index) => (
         <div
           key={item.id}
@@ -52,7 +55,10 @@ const RightNews = () => {
           {item.time && <p className="text-sm">{item.time} Hours ago</p>}
         </div>
       ))}
-      <div> <img src={def} className="w-{300px} h-{250px}" /></div>
+      <div>
+        {" "}
+        <img src={def} className="w-{300px} h-{250px}" />
+      </div>
     </div>
   );
 };
