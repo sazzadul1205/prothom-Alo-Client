@@ -1,4 +1,4 @@
-import def from "../../../../assets/News/Default.png"
+import def from "../../../../assets/News/Default.png";
 
 const BanLeftNews = [
   {
@@ -73,42 +73,43 @@ const BanNews = () => {
         ))}
       </div>
       {/*  Middle */}
-      <div className="border-r border-black mx-1">
+      <div className="border-r border-black px-2">
         {BanMiddleNews.map((item, index) => (
           <div
             key={item.id}
             style={{
-              borderBottom: "1px solid #ccc",
-              padding: "10px",
-              marginBottom: "10px",
-              paddingBottom:
-                index === BanMiddleNews.length - 1 ? "10px" : "10px", // Adding extra padding at the last item
+              borderBottom:
+                index === BanMiddleNews.length - 1 ? "none" : "1px solid #ccc",
             }}
+            className="p-2 mb-2"
           >
-            <div className="flex items-center justify-between">
-              <div className="flex-1">
-                <h3 className="font-bold hover:text-blue-400">{item.title}</h3>
+            <div className="flex items-start justify-between">
+              <div className="flex flex-1">
+                <h3 className="font-bold hover:text-blue-400 mt-3">
+                  {item.title}
+                </h3>
               </div>
               {item.imageUrl && (
                 <img
                   src={item.imageUrl}
                   alt={item.title}
-                  className="w-[155px] ml-[104px]"
+                  className="w-[155px] ml-2"
                 />
               )}
             </div>
-            <p className="font-light ">{item.content}</p>
-            {item.time && <p className="text-sm">{item.time} Hours ago</p>}
+            <p className="font-light">{item.content}</p>
+            <p className="text-xs text-gray-400 mt-2">{item.time} ঘণ্টা আগে</p>
           </div>
         ))}
       </div>
+
       {/* Left */}
       <div>
-        <div className="w-[300px] border-l-3 border-black py-2">
+        <div className="w-[300px] border-l-3 border-black px-2">
           {BanRightNews.map((item) => (
-            <div key={item.id} className="mt-2 border-b px-2 py-5">
+            <div key={item.id} className="mt-2 border-b px-2 pb-5 pt-2">
               <div className="flex items-center justify-between">
-                <div className="flex-1">
+                <div className="flex">
                   <h3 className="font-bold hover:text-blue-400">
                     {item.title}
                   </h3>
@@ -125,7 +126,7 @@ const BanNews = () => {
           ))}
         </div>
         <div>
-          <img src={def} className="w-{300px} h-{250px} my-5" />
+          <img src={def} className="w-[300px] h-[250px] my-5" />
         </div>
       </div>
     </div>

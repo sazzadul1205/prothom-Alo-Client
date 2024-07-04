@@ -1,6 +1,5 @@
-import React from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-
+import "react-tabs/style/react-tabs.css";
 
 const article = [
   {
@@ -70,9 +69,16 @@ const SportsLeft = () => {
   return (
     <div className="w-1/4">
       <Tabs className="border-t-4 border-gray-400 py-5">
-        <TabList className=" border-black grid grid-cols-3">
+        <TabList className="border-black grid grid-cols-3">
           {article.map((tab, index) => (
-            <Tab key={index} className="border-b-4 border-black hover:border-red-500 hover:border-b-4 focus:border-red-500 focus:border-b-4  px-5 pb-3  ">
+            <Tab
+              key={index}
+              className={`border-b-4 border-black px-5 pb-3 ${
+                tab.isSelected
+                  ? "border-red-500"
+                  : "hover:border-red-500 hover:border-b-4 focus:border-red-500 focus:border-b-4"
+              }`}
+            >
               <h1 className="mx-auto">{tab.title}</h1>
             </Tab>
           ))}

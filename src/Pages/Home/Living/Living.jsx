@@ -37,17 +37,22 @@ const LifeNews = [
 ];
 const Living = () => {
   return (
-    <div className="bg-white w-full text-black py-4 ">
+    <div className="bg-white w-full text-black py-4 mt-5">
       <div className="max-w-screen-xl mx-auto">
         <div className="flex justify-between items-center mb-4 border-t-4 border-gray-400">
-          <h1 className="text-black text-xl font-bold hover:text-blue-400 flex mt-4 ">
+          <h1 className="text-black text-xl font-bold hover:text-blue-400 flex mt-4">
             জীবনযাপন
             <FaGreaterThan className="text-red-500 text-xl ml-4 mt-1" />
           </h1>
         </div>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-4">
-          {LifeNews.map((news) => (
-            <div key={news.id} className="border-r border-gray-200 rounded p-4">
+          {LifeNews.map((news, index) => (
+            <div
+              key={news.id}
+              className={`border-r border-gray-200 rounded p-4 ${
+                index === LifeNews.length - 1 ? "border-r-0" : ""
+              }`}
+            >
               <img
                 src={news.imageUrl}
                 alt=""

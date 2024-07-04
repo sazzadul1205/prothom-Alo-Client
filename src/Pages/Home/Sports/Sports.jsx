@@ -1,4 +1,3 @@
-import React from "react";
 import SportsLeft from "./SportsLeft/SportsLeft";
 import SportsMiddle from "./SportsMiddle/SportsMiddle";
 

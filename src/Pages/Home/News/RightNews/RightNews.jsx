@@ -1,4 +1,3 @@
-import React from "react";
 import def from "../../../../assets/News/Default.png";
 
 const RightNews = () => {
@@ -29,8 +28,7 @@ const RightNews = () => {
 
   return (
     <div className="w-1/4">
-      <div>
-        {" "}
+      <div className="pb-2 border-b">
         <img src={def} className="w-{300px} h-{250px}" />
       </div>
       {newsItems.map((item, index) => (
@@ -40,7 +38,7 @@ const RightNews = () => {
             borderBottom: "1px solid #ccc",
             padding: "10px",
             marginBottom: "10px",
-            paddingBottom: index === newsItems.length - 1 ? "10px" : "10px", // Adding extra padding at the last item
+            paddingBottom: index === newsItems.length - 1 ? "10px" : "10px",
           }}
         >
           <div className="flex items-center justify-between">

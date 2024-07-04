@@ -31,17 +31,17 @@ const News = [
   },
 ];
 
-const ImgNews = () => {
+const Optional = () => {
   return (
     <div className="bg-[#FFF3E080] py-4 flex justify-center">
       <div className="w-[1311px]">
         <div className="grid grid-cols-4 gap-2 mx-auto">
           {News.map((newsItem) => (
-            <div key={newsItem.id} className="relative h-[105px] w-[288px]">
+            <div key={newsItem.id} className="relative h-[105px] w-[288px] ">
               <img
                 src={newsItem.backgroundImg}
                 alt={newsItem.title}
-                className="w-full h-[105px] object-cover opacity-30 bg-black"
+                className="w-full h-[105px] object-cover "
               />
               <div className="absolute inset-0 flex-col justify-center items-center p-3">
                 <h1 className="text-white mb-2 text-sm hover:text-yellow-400 relative group">
@@ -60,4 +60,4 @@ const ImgNews = () => {
   );
 };
 
-export default ImgNews;
+export default Optional;

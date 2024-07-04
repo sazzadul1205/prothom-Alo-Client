@@ -85,7 +85,7 @@ const More = () => {
   return (
     <div className="bg-white w-full text-black py-4">
       <div className="max-w-screen-xl mx-auto">
-        <div className="grid grid-cols-4 gap-4 mt-10">
+        <div className="grid grid-cols-4 gap-10 mt-10">
           {moreData.map((item) => (
             <div key={item.id}>
               <div className="flex justify-between items-center mb-4 border-t-4 border-gray-400">

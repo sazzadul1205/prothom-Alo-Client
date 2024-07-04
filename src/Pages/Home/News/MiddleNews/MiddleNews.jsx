@@ -1,4 +1,3 @@
-import React from "react";
 import def from "../../../../assets/News/Default.png";
 
 const MiddleTopNews = [
@@ -40,17 +39,20 @@ const MiddleMiddleBottomNews = [
     id: 1,
     title: "সালমান মুক্তাদিরের কী হয়েছে",
     imageUrl: def,
+    time: "2",
   },
   {
     id: 2,
     title:
       " আমার নাম শুনে একজন কন্ট্রাক্ট কিলিং থেকে সরে আসে: ব্যারিস্টার সুমন",
     imageUrl: def,
+    time: "2",
   },
   {
     id: 3,
     title: "  কোটা বাতিল: দাবি আদায় না হওয়া পর্যন্ত রাজপথ ছাড়ব না",
     imageUrl: def,
+    time: "1",
   },
 ];
 const MiddleBottomNews = [
@@ -82,32 +84,43 @@ const MiddleNews = () => {
   return (
     <div className="w-2/4">
       {/* Top News */}
-      {MiddleTopNews.map((news) => (
-        <div key={news.id} className="flex border-b border-black pb-3">
-          <div>
-            <img src={news.imageUrl} alt="" />
-            <p className="text-sm">{news.description}</p>
+      <div>
+        {MiddleTopNews.map((news) => (
+          <div key={news.id} className="flex border-b border-black pb-3">
+            <div>
+              <img src={news.imageUrl} alt="" />
+              <p className="text-sm">{news.description}</p>
+            </div>
+            <div className="">
+              <h1 className="text-xl font-semibold hover:text-blue-400">
+                {news.title}
+              </h1>
+              <p className="text-sm mt-4">{news.content}</p>
+              <p className="mt-2 text-sm">{news.time} ঘণ্টা আগে</p>
+            </div>
           </div>
-          <div className="mt-3">
-            <h1 className="text-xl font-semibold">{news.title}</h1>
-            <p className="text-sm mt-1">{news.content}</p>
-            <p className="mt-2">{news.time} ঘণ্টা আগে</p>
-          </div>
-        </div>
-      ))}
+        ))}
+      </div>
       {/* Middle Top News */}
       <div className="border-b py-4">
         <div className="grid grid-cols-2">
-          {MiddleMiddleTopNews.map((news) => (
-            <div key={news.id} className="border-r px-2">
+          {MiddleMiddleTopNews.map((news, index) => (
+            <div
+              key={news.id}
+              className={`px-2 ${
+                index !== MiddleMiddleTopNews.length - 1 ? "border-r" : ""
+              }`}
+            >
               <div className="flex items-center justify-between">
                 <div className="flex-1">
-                  <h3 className="font-bold hover:text-blue-400">{news.title}</h3>
+                  <h3 className="font-bold hover:text-blue-400">
+                    {news.title}
+                  </h3>
                 </div>
                 <img src={news.imageUrl} className="w-28 ml-4" />
               </div>
               <p className="font-light">{news.content}</p>
-              <p className="text-sm">{news.time} ঘণ্টা আগে</p>
+              <p className="text-sm mt-2">{news.time} ঘণ্টা আগে</p>
             </div>
           ))}
         </div>
@@ -115,22 +128,32 @@ const MiddleNews = () => {
       {/* Middle bottom News */}
       <div className="border-b py-3">
         <div className="grid grid-cols-3">
-          {MiddleMiddleBottomNews.map((news) => (
-            <div key={news.id} className="border-r pl-2">
+          {MiddleMiddleBottomNews.map((news, index) => (
+            <div
+              key={news.id}
+              className={`pl-2 ${index % 3 !== 2 ? "border-r" : ""}`}
+            >
               <img src={news.imageUrl} alt="" />
-              <h3 className="font-bold hover:text-blue-400 ">{news.title}</h3>
+              <h3 className="font-bold hover:text-blue-400">{news.title}</h3>
+              <p className="mt-2 text-sm">{news.time} ঘণ্টা আগে</p>
             </div>
           ))}
         </div>
       </div>
+
       {/* Bottom News */}
-      <div className="">
-        <div className="grid grid-cols-3 py-4">
-          {MiddleBottomNews.map((news) => (
-            <div key={news.id} className="border-r pl-2">
-              <h3 className="font-bold hover:text-blue-400 mb-2">{news.title}</h3>
+      <div>
+        <div className="grid grid-cols-3 gap-4 py-4">
+          {MiddleBottomNews.map((news, index) => (
+            <div
+              key={news.id}
+              className={`pl-2 ${index % 3 !== 2 ? "border-r" : ""}`}
+            >
+              <h3 className="font-bold hover:text-blue-400 mb-2">
+                {news.title}
+              </h3>
               <p className="font-light">{news.content}</p>
-              <p className="text-sm">{news.time} ঘণ্টা আগে</p>
+              <p className="text-sm mt-4">{news.time} ঘণ্টা আগে</p>
             </div>
           ))}
         </div>

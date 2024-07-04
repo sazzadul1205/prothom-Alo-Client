@@ -1,4 +1,3 @@
-import React from "react";
 import { FaGreaterThan } from "react-icons/fa";
 import def from "../../../assets/News/Default.png";
 
@@ -47,9 +46,14 @@ const ForMe = () => {
             <FaGreaterThan className="text-red-500 text-xl ml-4 mt-1" />
           </h1>
         </div>
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-4">
-          {ForMeNews.map((news) => (
-            <div key={news.id} className="border-r border-gray-200 rounded p-4">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-4 pb-5">
+          {ForMeNews.map((news, index) => (
+            <div
+              key={news.id}
+              className={`rounded p-4 ${
+                index !== ForMeNews.length - 1 ? "border-r border-gray-200" : ""
+              }`}
+            >
               <img
                 src={news.imageUrl}
                 alt=""

@@ -6,16 +6,19 @@ const EntLeftNews = [
     id: 1,
     title: "চলে গেলেন ‘চায়নাটাউন’-এর চিত্রনাট্যকার রবার্ট টাউন",
     imageUrl: def,
+    time: 2,
   },
   {
     id: 2,
     title: "অনন্ত-রাধিকার বিয়েতে গাইবেন কারা",
     imageUrl: def,
+    time: 1,
   },
   {
     id: 2,
     title: "উড়ছেন শর্বরী, কারণ...",
     imageUrl: def,
+    time: 6,
   },
 ];
 
@@ -35,23 +38,26 @@ const EntRightNews = [
     id: 1,
     title: "‘কুইন অব টিয়ারস’ জুটির প্রেমের গুঞ্জন",
     imageUrl: def,
+    time: 3,
   },
   {
     id: 2,
     title: "ঘুরেফিরে সেই ঈদনির্ভরতা",
     imageUrl: def,
+    time: 6,
   },
   {
     id: 2,
     title: "২১ পেরিয়ে ২২ বছরে এনটিভি",
     imageUrl: def,
+    time: 9,
   },
 ];
 
 const Entertainment = () => {
   return (
     <div className="bg-white w-full text-black py-4 ">
-      <div className="max-w-screen-xl mx-auto">
+      <div className="max-w-screen-xl mx-auto mt-5">
         <div className="flex justify-between items-center mb-4 border-t-4 border-gray-400">
           <h1 className="text-black text-xl font-bold hover:text-blue-400 flex mt-4 ">
             বিনোদন
@@ -62,12 +68,15 @@ const Entertainment = () => {
           {/* Left Section */}
           <div className="border-r border-black py-2">
             {EntLeftNews.map((item) => (
-              <div key={item.id} className="mt-2 border-b px-2 py-5">
-                <div className="flex items-center justify-between">
+              <div key={item.id} className="mt-2  px-2 py-5">
+                <div className="flex items-center justify-between border-b pb-2">
                   <div className="flex-1">
                     <h3 className="font-bold hover:text-blue-400">
                       {item.title}
                     </h3>
+                    <p className="text-xs text-gray-400 mt-1 ">
+                      {item.time} ঘণ্টা আগে
+                    </p>
                   </div>
                   {item.imageUrl && (
                     <img
@@ -103,12 +112,15 @@ const Entertainment = () => {
           {/* Right Section */}
           <div className=" border-l-3 border-black py-2">
             {EntRightNews.map((item) => (
-              <div key={item.id} className="mt-2 border-b px-2 py-5">
-                <div className="flex items-center justify-between">
+              <div key={item.id} className="mt-2  px-2 py-5">
+                <div className="flex items-center justify-between border-b pb-2">
                   <div className="flex-1">
-                    <h3 className="font-bold hover:text-blue-400">
+                    <h3 className="font-bold hover:text-blue-400 ">
                       {item.title}
                     </h3>
+                    <p className="text-xs text-gray-400 mt-1">
+                      {item.time} ঘণ্টা আগে
+                    </p>
                   </div>
                   {item.imageUrl && (
                     <img

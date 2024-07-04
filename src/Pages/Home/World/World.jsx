@@ -17,11 +17,13 @@ const WorldTopNews = [
     id: 1,
     title: "সরে দাঁড়ানো নিয়ে নিজ দলেই চাপের মুখে বাইডেন",
     imageUrl: def,
+    time: 1
   },
   {
     id: 2,
     title: "গাজার শিশুদের মধ্যে ছড়াচ্ছে মারাত্মক চর্মরোগ",
     imageUrl: def,
+    time: 4
   },
 ];
 
@@ -30,11 +32,13 @@ const WorldBottomNews = [
     id: 1,
     title: "ট্রাম্পের সঙ্গে বিতর্কে ‘প্রায় ঘুমিয়ে পড়েছিলেন’ বাইডেন",
     imageUrl: def,
+    time: 2
   },
   {
     id: 2,
     title: "অস্ট্রেলিয়ার নিখোঁজ শিশুটি কুমিরের আক্রমণের শিকার, ধারণা পুলিশের",
     imageUrl: def,
+    time: 9
   },
 ];
 
@@ -42,7 +46,7 @@ const World = () => {
   return (
     <div className="bg-white w-full text-black py-4">
       <div className="max-w-screen-xl mx-auto">
-        <div className="flex justify-between items-center mb-4 border-t-4 border-gray-400">
+        <div className="flex justify-between items-center mb-4 border-t-4 border-gray-400 mt-5">
           <h1 className="text-black text-xl font-bold hover:text-blue-400 flex mt-4">
             বিশ্ব
             <FaGreaterThan className="text-red-500 text-xl ml-4 mt-1" />
@@ -58,21 +62,28 @@ const World = () => {
                   alt=""
                   className="w-[442px] h-[352px] object-cover mb-2"
                 />
-                <h3 className="text-lg font-semibold hover:text-blue-500 mb-2">
+                <h3 className="text-xl font-semibold hover:text-blue-500 mb-2 mt-5">
                   {news.title}
                 </h3>
-                <p className="text-sm text-gray-600 mb-2">{news.content}</p>
+                <p className="text-sm text-gray-600 mb-2 mt-6">
+                  {news.content}
+                </p>
                 <p className="text-xs text-gray-400">{news.time} ঘণ্টা আগে</p>
               </div>
             ))}
           </div>
           {/* Right Section */}
           <div className="w-3/5 pl-4">
+            {/* Top */}
             <div className="flex mb-4">
-              {WorldTopNews.map((news) => (
+              {WorldTopNews.map((news, index) => (
                 <div
                   key={news.id}
-                  className="border-r rounded p-4 w-1/2 pr-2"
+                  className={` rounded p-2 w-1/2 ${
+                    index === WorldTopNews.length - 1
+                      ? "border-l"
+                      : "border-none"
+                  }`}
                 >
                   <img
                     src={news.imageUrl}
@@ -82,15 +93,23 @@ const World = () => {
                   <h3 className="text-lg font-semibold hover:text-blue-500 mb-2">
                     {news.title}
                   </h3>
+                  <p className="text-xs text-gray-400">{news.time} ঘণ্টা আগে</p>
                 </div>
               ))}
             </div>
+
             <div className="border-b border-black mb-4"></div>
+
+            {/* Bottom */}
             <div className="flex">
-              {WorldBottomNews.map((news) => (
+              {WorldBottomNews.map((news, index) => (
                 <div
                   key={news.id}
-                  className="border-r rounded p-4 w-1/2 pr-2"
+                  className={` rounded p-2 w-1/2 ${
+                    index === WorldTopNews.length - 1
+                      ? "border-l"
+                      : "border-none"
+                  }`}
                 >
                   <img
                     src={news.imageUrl}
@@ -100,6 +119,7 @@ const World = () => {
                   <h3 className="text-lg font-semibold hover:text-blue-500 mb-2">
                     {news.title}
                   </h3>
+                  <p className="text-xs text-gray-400">{news.time} ঘণ্টা আগে</p>
                 </div>
               ))}
             </div>
