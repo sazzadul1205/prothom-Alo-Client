@@ -1,41 +1,26 @@
 import img1 from "../../../assets/imgNews/News1.jfif";
 import img2 from "../../../assets/imgNews/News2.jfif";
-import img3 from "../../../assets/imgNews/News3.jfif";
-import img4 from "../../../assets/imgNews/News4.jfif";
 
 const News = [
   {
     id: 1,
-    title: "শিক্ষা",
-    content:
-      "ষষ্ঠ থেকে নবমে ষাণ্মাসিক মূল্যায়ন আজ শুরু, যে ১৩ নির্দেশনা মানতে হবে",
+    title: "সকালের খবর ",
+    content: " সকালেই পড়ুন আলোচিত ৫ খবর",
     backgroundImg: img1,
   },
   {
     id: 2,
-    title: "প্রযুক্তি",
-    content: "মরুভূমির শেওলা কি প্রাণ আনতে পারবে মঙ্গল গ্রহে",
+    title: "সন্ধ্যার খবর ",
+    content: " সন্ধ্যায় সারা দিনের খবর",
     backgroundImg: img2,
-  },
-  {
-    id: 3,
-    title: "ধর্ম",
-    content: "সুরা ওয়াকিয়ায় কেয়ামত সম্পর্কে জানা যায়",
-    backgroundImg: img3,
-  },
-  {
-    id: 4,
-    title: "একটু থামুন",
-    content: "কটন বল কী দিয়ে তৈরি হয়, জানেন?",
-    backgroundImg: img4,
   },
 ];
 
-const ImgNews = () => {
+const ImgNews3 = () => {
   return (
-    <div className="bg-[#FFF3E080] py-4 flex justify-center">
-      <div className="w-[1311px]">
-        <div className="grid grid-cols-4 gap-2 mx-auto">
+    <div className="bg-[#E3F2FD80] py-4 flex justify-center mx-auto">
+      <div className="w-[1311px] flex justify-center">
+        <div className="flex gap-10 justify-center">
           {News.map((newsItem) => (
             <div key={newsItem.id} className="relative h-[105px] w-[288px]">
               <img
@@ -60,4 +45,4 @@ const ImgNews = () => {
   );
 };
 
-export default ImgNews;
+export default ImgNews3;

@@ -1,4 +1,3 @@
-import React from "react";
 import LeftNews from "./LeftNews/LeftNews";
 import MiddleNews from "./MiddleNews/MiddleNews";
 import RightNews from "./RightNews/RightNews";

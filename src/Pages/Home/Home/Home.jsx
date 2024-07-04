@@ -13,6 +13,11 @@ import Opinions from '../Opinions/Opinions';
 import Business from '../Business/Business';
 import BottomAD from '../BottomAD/BottomAD';
 import Paper from '../Paper/Paper';
+import Images from '../Images/Images';
+import Videos from '../Videos/Videos';
+import ImgNews3 from '../ImgNews3/ImgNews3';
+import More from '../More/More';
+import More2 from '../More2/More2';
 
 const Home = () => {
     return (
@@ -32,6 +37,11 @@ const Home = () => {
             <Business></Business>
             <BottomAD></BottomAD>
             <Paper></Paper>
+            <Images></Images>
+            <Videos></Videos>
+            <ImgNews3></ImgNews3>
+            <More></More>
+            <More2></More2>
         </div>
     );
 };
