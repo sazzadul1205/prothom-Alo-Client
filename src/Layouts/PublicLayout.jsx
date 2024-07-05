@@ -34,14 +34,14 @@ const PublicLayout = () => {
   return (
     <div className="relative min-h-screen bg-white">
       <div
-        className={`fixed top-0 left-0 w-full z-50 bg-white shadow-md transition-transform duration-300 transform ${
+        className={`fixed top-0 left-0 lg:w-full lg:ml-5 z-50 bg-white  transition-transform duration-300 transform ${
           primaryVisible ? "translate-y-0" : "-translate-y-full"
         }`}
       >
         <PrimaryNavbar />
       </div>
       <div
-        className="fixed top-28 left-0 w-full z-50 bg-white shadow-md"
+        className="fixed top-28 left-0 lg:w-full z-50 bg-white "
         style={{ top: `${secondaryTop}px`, transition: "top 0.3s ease-out" }}
       >
         <SecondaryNavbar />

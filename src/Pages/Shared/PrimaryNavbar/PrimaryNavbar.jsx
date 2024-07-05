@@ -12,16 +12,16 @@ const articles = [
 
 const PrimaryNavbar = () => {
   return (
-    <header className="bg-white border-b w-full h-28 py-2 text-black">
-      <div className="max-w-screen-xl mx-auto py-2 px-4">
-        <div className="flex justify-between items-center">
-          <div className="flex items-center space-x-4">
-            <img src={icon} alt="Logo" className="h-16 w-64" />
+    <header className="bg-white lg:w-full h-28 lg:py-2 text-black">
+      <div className="lg:max-w-screen-xl lg:mx-auto py-2 px-4">
+        <div className="flex lg:justify-between lg:items-center ">
+          <div className="lg:flex lg:items-center lg:space-x-4">
+            <img src={icon} alt="Logo" className="lg:h-16 lg:w-64" />
           </div>
 
-          <div className="flex space-x-4">
+          <div className="hidden space-x-4 lg:flex">
             {articles.map((article, index) => (
-              <div key={index} className="flex items-start relative">
+              <div key={index} className="flex lg:items-start relative">
                 <img
                   src={article.image}
                   alt={`News ${index + 1}`}

@@ -1,14 +1,13 @@
-import React from "react";
 import news from "../../../assets/Footer/news.png";
 import google from "../../../assets/Footer/google.png";
 import apple from "../../../assets/Footer/apple.png";
 
 const IconsAndPlay = () => {
   return (
-    <div className="grid grid-cols-2 justify-between py-5">
-      <div>
+    <div className="grid grid-cols-1 lg:grid-cols-2 justify-between py-5">
+      <div className="ml-5 lg:ml-0">
         <h1 className="text-sm font-thin ml-16">অনুসরণ করুন</h1>
-        <div className="mt-4 flex gap-2">
+        <div className="mt-4 flex gap-2 m">
           {/* Facebook Icon */}
           <div className="w-10">
             <svg
@@ -128,8 +127,8 @@ l2.366,3.195L15.531,7z M14.947,15.986h0.92L9.926,7.962H8.937L14.947,15.986z"
           </div>
         </div>
       </div>
-      <div className=" flex flex-col items-end">
-        <h1 className="text-sm font-thin mr-10">মোবাইল অ্যাপস ডাউনলোড করুন</h1>
+      <div className=" flex flex-col mt-5 lg:mt-0 lg:items-end ml-5 lg:ml-0">
+        <h1 className="text-sm font-thin lg:mr-10">মোবাইল অ্যাপস ডাউনলোড করুন</h1>
         <div className="mt-4 flex gap-2">
           <div>
             <img src={google} alt="" className="w-32 h-10" />

@@ -47,8 +47,8 @@ const SportsMiddle = () => {
   const middleTop = middleTopNews[0];
 
   return (
-    <div className="w-3/4 relative border-t-4 border-gray-400 flex">
-      <div className="">
+    <div className="w-full lg:w-3/4 relative border-t-4 border-gray-400 flex flex-col lg:flex-row">
+      <div className="lg:flex-1">
         {/* Top */}
         <div className="flex items-center mt-2">
           <div className="badge badge-primary badge-md h-6 w-6 bg-[#0573E6]"></div>
@@ -56,11 +56,11 @@ const SportsMiddle = () => {
         </div>
 
         {/* Middle Top */}
-        <div className="w-[605px] relative mt-2">
+        <div className="w-full lg:w-[605px] relative mt-2">
           <img
             src={middleTop.imageUrl}
             alt=""
-            className="w-[600px] h-[387px] bg-opacity-50"
+            className="w-full lg:w-[600px] h-[387px] bg-opacity-50"
           />
 
           {/* Camera icon */}
@@ -69,7 +69,7 @@ const SportsMiddle = () => {
           </div>
 
           {/* Text at bottom */}
-          <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white py-4 px-6 w-[600px]">
+          <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white py-4 px-6 w-full lg:w-[600px]">
             <h1 className="text-2xl font-bold hover:text-yellow-400">
               {middleTop.title}
             </h1>
@@ -78,8 +78,8 @@ const SportsMiddle = () => {
         </div>
         <hr className="border-b mt-5 border-black" />
         {/* Middle Bottom */}
-        <div className="w-[600px]">
-          <div className="grid grid-cols-2 mt-5">
+        <div className="w-full lg:w-[600px]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 mt-5">
             {middleBottomNews.map((news, index) => (
               <div
                 key={news.id}
@@ -103,12 +103,12 @@ const SportsMiddle = () => {
         </div>
       </div>
 
-      <div className="border border-black ml-2"></div>
+      <div className="hidden lg:block border border-black ml-2"></div>
 
       {/* Middle Right */}
-      <div className="w-[300px] border-l-3 border-black py-2 ml-2">
+      <div className="w-full lg:w-[300px] border-l-3 border-black py-2 lg:ml-2">
         <div>
-          <img src={def} className="w-{300px} h-{250px} my-5" />
+          <img src={def} className="w-full lg:w-[300px] h-[250px] my-5" />
         </div>
         {newsItems.map((item) => (
           <div key={item.id} className="mt-2 border-t px-2 py-5">

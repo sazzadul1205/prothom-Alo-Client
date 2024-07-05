@@ -34,19 +34,19 @@ const News = [
 const Optional = () => {
   return (
     <div className="bg-[#FFF3E080] py-4 flex justify-center">
-      <div className="w-[1311px]">
-        <div className="grid grid-cols-4 gap-2 mx-auto">
+      <div className="w-full max-w-[1311px] px-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 mx-auto">
           {News.map((newsItem) => (
-            <div key={newsItem.id} className="relative h-[105px] w-[288px] ">
+            <div key={newsItem.id} className="relative h-[105px] w-full">
               <img
                 src={newsItem.backgroundImg}
                 alt={newsItem.title}
-                className="w-full h-[105px] object-cover "
+                className="w-full h-[105px] object-cover"
               />
-              <div className="absolute inset-0 flex-col justify-center items-center p-3">
+              <div className="absolute inset-0 flex flex-col justify-center items-center p-3">
                 <h1 className="text-white mb-2 text-sm hover:text-yellow-400 relative group">
                   {newsItem.title}
-                  <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-yellow-400 transition-all duration-300 group-hover:w-10"></span>
+                  <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
                 </h1>
                 <p className="text-white text-sm hover:text-yellow-400">
                   {newsItem.content}

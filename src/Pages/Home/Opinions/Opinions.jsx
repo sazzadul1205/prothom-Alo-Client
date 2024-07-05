@@ -50,19 +50,21 @@ const Opinions = () => {
             <FaGreaterThan className="text-red-500 text-xl ml-4 mt-1" />
           </h1>
         </div>
-        <div className="flex">
+        <div className="flex flex-col md:flex-row">
           {/* Main comment */}
-          <div className="w-2/5">
+          <div className="md:w-2/5">
             {mainComment && (
-              <div className="border mx-28 border-black h-[384px] relative p-4">
-                <h1 className="absolute top-6 left-[-50px] bg-[#001246] text-white text-2xl p-2">
+              <div className="border mx-2 md:mx-20 border-black h-[400px] md:h-[384px] relative p-4">
+                <h1 className="absolute top-2 md:left-[-50px] bg-[#001246] text-white text-2xl p-2">
                   {mainComment.mainComment.title1}
                 </h1>
-                <h1 className="absolute top-16 left-[-50px] bg-[#001246] text-white text-2xl p-2 mt-3">
+                <h1 className="absolute top-12 md:left-[-50px] bg-[#001246] text-white text-2xl p-2 mt-3">
                   {mainComment.mainComment.title2}
                 </h1>
-                <p className="mt-32 mx-6">{mainComment.mainComment.content}</p>
-                <div className="absolute bottom-4 left-4 w-full">
+                <p className="mt-32 md:mt-32 md:mx-6">
+                  {mainComment.mainComment.content}
+                </p>
+                <div className="absolute bottom-4 left-4 w-full ">
                   <div className="w-full mb-2"></div>
                   <div className="flex items-center px-5">
                     <div className="avatar mr-2">
@@ -85,8 +87,8 @@ const Opinions = () => {
             )}
           </div>
           {/* All comments */}
-          <div className="w-3/5">
-            <div className="">
+          <div className="md:w-3/5 mt-4 md:mt-0">
+            <div className="flex flex-col">
               {EntLeftNews.map((item, index) => (
                 <div
                   key={item.id}
@@ -94,7 +96,7 @@ const Opinions = () => {
                     index === EntLeftNews.length - 1 ? "" : "border-b"
                   } px-2 py-3`}
                 >
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center">
                     {item.imageUrl && (
                       <div className="avatar mr-5">
                         <div className="w-16 rounded-full">

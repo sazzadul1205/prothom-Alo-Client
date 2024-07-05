@@ -39,9 +39,9 @@ const ForMeNews = [
 const ForMe = () => {
   return (
     <div className="bg-white w-full text-black py-4">
-      <div className="max-w-screen-xl mx-auto">
-        <div className="flex justify-between items-center mb-4">
-          <h1 className="text-black text-xl font-bold hover:text-blue-400 flex ">
+      <div className="max-w-screen-xl mx-auto ">
+        <div className="flex justify-between items-center mb-4 border-t-4 border-gray-400 mt-5">
+          <h1 className="text-black text-xl font-bold hover:text-blue-400 flex mt-4">
             আপনার জন্য
             <FaGreaterThan className="text-red-500 text-xl ml-4 mt-1" />
           </h1>
@@ -51,7 +51,7 @@ const ForMe = () => {
             <div
               key={news.id}
               className={`rounded p-4 ${
-                index !== ForMeNews.length - 1 ? "border-r border-gray-200" : ""
+                index !== ForMeNews.length - 1 ? "border-b lg:border-r border-gray-200" : ""
               }`}
             >
               <img

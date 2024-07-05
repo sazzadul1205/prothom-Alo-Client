@@ -45,13 +45,13 @@ const Others = () => {
             অন্যান্য
           </h1>
         </div>
-        <div className="grid grid-cols-3 gap-4 mt-10">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-10">
           {moreData.map((item) => (
-            <div key={item.id} className="w-[382px]">
+            <div key={item.id} className="lg:w-[382px]">
               <div className="border rounded-md p-4 h-full flex flex-col justify-between">
                 <h1 className="relative font-bold hover:text-blue-400 mb-2  w-1/6 border-b-2 border-red-400">
                   {item.title}
-                  {/* <span className="absolute left-0 bottom-[-2px] w-full h-[2px] bg-red-600"></span> */}
+
                 </h1>
                 <div>
                   <img

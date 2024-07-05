@@ -1,7 +1,6 @@
 import def from "../../../../assets/News/Default.png";
 
 const LeftNews = () => {
-  // Dummy news data for demonstration
   const newsItems = [
     {
       id: 1,
@@ -67,7 +66,7 @@ const LeftNews = () => {
   ];
 
   return (
-    <div className="w-1/4">
+    <div className="w-full lg:w-1/4">
       {newsItems.map((item, index) => (
         <div
           key={item.id}
@@ -87,7 +86,7 @@ const LeftNews = () => {
               <img src={item.imageUrl} alt={item.title} className="w-28 ml-4" />
             )}
           </div>
-          <p className="font-light ">{item.content}</p>
+          <p className="font-light">{item.content}</p>
           {item.time && (
             <p className="text-md pt-4 font-light">{item.time} ঘণ্টা আগে</p>
           )}

@@ -35,6 +35,7 @@ const LifeNews = [
     time: 5,
   },
 ];
+
 const Living = () => {
   return (
     <div className="bg-white w-full text-black py-4 mt-5">
@@ -45,7 +46,7 @@ const Living = () => {
             <FaGreaterThan className="text-red-500 text-xl ml-4 mt-1" />
           </h1>
         </div>
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-4">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
           {LifeNews.map((news, index) => (
             <div
               key={news.id}

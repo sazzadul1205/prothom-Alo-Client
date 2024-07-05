@@ -68,9 +68,9 @@ const Images = () => {
             <FaGreaterThan className="text-red-500 text-xl ml-4 mt-1" />
           </h1>
         </div>
-        <div className="flex gap-2">
+        <div className="lg:flex gap-2">
           {/* Slider */}
-          <div>
+          <div className="mb-10 lg:mb-0 pb-5 lg:pb-0 border-b lg:border-b-0">
             <Swiper
               spaceBetween={30}
               centeredSlides={true}
@@ -83,7 +83,7 @@ const Images = () => {
               }}
               navigation={true}
               modules={[Autoplay, Pagination, Navigation]}
-              className="mySwiper w-[750px] h-[506px]"
+              className="mySwiper lg:w-[750px] lg:h-[506px] "
             >
               {SliderImage.map((news) => (
                 <SwiperSlide key={news.id}>
@@ -102,14 +102,14 @@ const Images = () => {
             <p className="text-xs text-gray-400">2 ঘণ্টা আগে</p>
           </div>
           {/* images */}
-          <div className="ml-2">
-            <div className="grid grid-cols-2 gap-5">
+          <div className="lg:ml-2 ml-5">
+            <div className="grid md:grid-cols-2 gap-5">
               {ImagesNews.map((news) => (
-                <div key={news.id}>
+                <div key={news.id} className="mb-10 lg:mb-0 pb-5 lg:pb-0 border-b lg:border-b-0">
                   <img
                     src={news.imageUrl}
                     alt=""
-                    className="w-[212px] h-[212px]"
+                    className="lg:w-[212px] lg:h-[212px]"
                   />
                   <h3 className="text-lg font-semibold hover:text-blue-500 mb-2">
                     {news.title}

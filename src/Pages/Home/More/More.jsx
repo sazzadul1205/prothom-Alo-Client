@@ -85,17 +85,17 @@ const More = () => {
   return (
     <div className="bg-white w-full text-black py-4">
       <div className="max-w-screen-xl mx-auto">
-        <div className="grid grid-cols-4 gap-10 mt-10">
+        <div className="grid grid-col-1 lg:grid-cols-4 gap-10 mt-10">
           {moreData.map((item) => (
-            <div key={item.id}>
+            <div key={item.id} >
               <div className="flex justify-between items-center mb-4 border-t-4 border-gray-400">
                 <h1 className="text-black text-xl font-bold hover:text-blue-400 flex mt-4">
                   {item.title}
                   <FaGreaterThan className="text-red-500 text-xl ml-4 mt-1" />
                 </h1>
               </div>
-              <div>
-                <img src={item.image} alt="" className="w-[288px] h-[192px]" />
+              <div className="pl-2 lg:pl-0">
+                <img src={item.image} alt="" className="lg:w-[288px] lg:h-[192px]" />
                 <h1 className="py-3 font-semibold">{item.mainHeadline}</h1>
                 {item.subHeadlines.map((sub, index) => (
                   <p key={index} className="border-t py-5">

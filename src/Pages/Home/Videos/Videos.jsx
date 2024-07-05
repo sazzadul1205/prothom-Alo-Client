@@ -51,14 +51,14 @@ const Videos = () => {
             <FaGreaterThan className="text-yellow-500 text-xl ml-4 mt-1" />
           </h1>
         </div>
-        <div className="flex">
+        <div className="lg:flex">
           <div>
             {/* Left */}
-            <div className="border-r border-black w-2/5 pr-4">
+            <div className="border-r border-black lg:w-2/5 lg:pr-4 pb-5 lg:pb-0">
               {VideoLeftNews.map((news) => (
                 <div
                   key={news.id}
-                  className="bg-[#121212] rounded w-[608px] h-[532px]"
+                  className="bg-[#121212] rounded lg:w-[608px] lg:h-[532px] pb-5"
                 >
                   <img
                     src={news.imageUrl}
@@ -77,11 +77,11 @@ const Videos = () => {
           </div>
           <div>
             {/* Right */}
-            <div className="grid grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {VideoRightNews.map((news) => (
                 <div
                   key={news.id}
-                  className="w-[288px] h-auto pb-2 bg-[#121212]"
+                  className="lg:w-[288px] h-auto pb-2 bg-[#121212]"
                 >
                   <img
                     src={news.imageUrl}

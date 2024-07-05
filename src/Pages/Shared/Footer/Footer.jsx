@@ -1,4 +1,3 @@
-import React from "react";
 import icon from "../../../assets/Footer/com.png";
 
 import IconsAndPlay from "./IconsAndPlay";
@@ -7,30 +6,36 @@ import End from "./End";
 
 const Footer = () => {
   return (
-    <div className="bg-white border-b w-full h-{123px} text-black">
+    <div className="bg-white border-b w-full text-black">
       <div className="max-w-screen-xl mx-auto">
-        <div className="border-t border-b ">
-          <div>
-            <img src={icon} className="py-5" />
+        {/* Main Content */}
+        <div className="py-5 border-t border-b">
+          <div className="flex items-center justify-center">
+            <img src={icon} alt="icon" className="py-5" />
           </div>
-          <div className="grid grid-cols-6 gap-4 py-5 font-light">
-            <div>নাগরিক সংবাদ</div>
-            <div>কিশোর আলো</div>
-            <div>বিজ্ঞানচিন্তা</div>
-            <div>প্রথম আলো ট্রাস্ট</div>
-            <div>বন্ধুসভা</div>
-            <div>চিরন্তন ১৯৭১</div>
-            <div>ইপেপার</div>
-            <div>প্রথমা</div>
-            <div>মোবাইল ভ্যাস</div>
+          <div className="grid grid-cols-2 md:grid-cols-6 gap-4 py-5 font-light">
+            <div className="col-span-2 md:col-auto">নাগরিক সংবাদ</div>
+            <div className="col-span-2 md:col-auto">কিশোর আলো</div>
+            <div className="col-span-2 md:col-auto">বিজ্ঞানচিন্তা</div>
+            <div className="col-span-2 md:col-auto">প্রথম আলো ট্রাস্ট</div>
+            <div className="col-span-2 md:col-auto">বন্ধুসভা</div>
+            <div className="col-span-2 md:col-auto">চিরন্তন ১৯৭১</div>
+            <div className="col-span-2 md:col-auto">ইপেপার</div>
+            <div className="col-span-2 md:col-auto">প্রথমা</div>
+            <div className="col-span-2 md:col-auto">মোবাইল ভ্যাস</div>
           </div>
         </div>
-        <IconsAndPlay></IconsAndPlay>
-        <FMore></FMore>
-        <End></End>
+
+        {/* Icons and Play */}
+        <IconsAndPlay />
+
+        {/* Footer More Links */}
+        <FMore />
+
+        {/* Footer End */}
+        <End />
       </div>
     </div>
   );
 };
-
 export default Footer;

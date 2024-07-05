@@ -49,24 +49,24 @@ const Business = () => {
       <div className="max-w-screen-xl mx-auto border-b pb-2 ">
         <div className="flex justify-between items-center mb-4 border-t-4 border-gray-400 mt-5">
           <h1 className="text-black text-xl font-bold hover:text-blue-400 flex mt-4">
-            বিশ্ব
+            বাণিজ্য
             <FaGreaterThan className="text-red-500 text-xl ml-4 mt-1" />
           </h1>
         </div>
-        <div className="flex">
+        <div className="flex flex-col sm:flex-row">
           {/* Left Section */}
-          <div className="border-r border-black w-2/5 pr-4">
+          <div className="sm:w-2/5 pr-4 md:border-r-2 border-black ">
             {BusinessLeftNews.map((news) => (
-              <div key={news.id} className="border-gray-200 rounded p-4">
+              <div key={news.id} className="border-gray-200 rounded p-4 mb-4">
                 <img
                   src={news.imageUrl}
                   alt=""
-                  className="w-[442px] h-[352px] object-cover mb-2"
+                  className="w-full h-auto object-cover mb-2"
                 />
-                <h3 className="text-xl font-semibold hover:text-blue-500 mb-2 mt-5">
+                <h3 className="text-xl font-semibold hover:text-blue-500 mb-2 mt-2">
                   {news.title}
                 </h3>
-                <p className="text-sm text-gray-600 mb-2 mt-6">
+                <p className="text-sm text-gray-600 mb-2">
                   {news.content}
                 </p>
                 <p className="text-xs text-gray-400">{news.time} ঘণ্টা আগে</p>
@@ -74,22 +74,22 @@ const Business = () => {
             ))}
           </div>
           {/* Right Section */}
-          <div className="w-3/5 pl-4">
+          <div className="sm:w-3/5 pl-4">
             {/* Top */}
-            <div className="flex mb-4">
+            <div className="flex flex-wrap mb-4">
               {BusinessTopNews.map((news, index) => (
                 <div
                   key={news.id}
-                  className={` rounded p-2 w-1/2 ${
+                  className={`rounded p-2 w-full sm:w-1/2  ${
                     index === BusinessTopNews.length - 1
-                      ? "border-l"
-                      : "border-none"
+                      ? "md:border-l border-t"
+                      : ""
                   }`}
                 >
                   <img
                     src={news.imageUrl}
                     alt=""
-                    className="w-[349px] h-[233px] object-cover mb-2"
+                    className="w-full h-auto object-cover mb-2"
                   />
                   <h3 className="text-lg font-semibold hover:text-blue-500 mb-2">
                     {news.title}
@@ -102,20 +102,20 @@ const Business = () => {
             <div className="border-b border-black mb-4"></div>
 
             {/* Bottom */}
-            <div className="flex">
+            <div className="flex flex-wrap">
               {BusinessBottomNews.map((news, index) => (
                 <div
                   key={news.id}
-                  className={` rounded p-2 w-1/2 ${
+                  className={`rounded p-2 w-full sm:w-1/2 ${
                     index === BusinessBottomNews.length - 1
-                      ? "border-l"
-                      : "border-none"
+                      ? "md:border-l border-t"
+                      : ""
                   }`}
                 >
                   <img
                     src={news.imageUrl}
                     alt=""
-                    className="w-[349px] h-[233px] object-cover mb-2"
+                    className="w-full h-auto object-cover mb-2"
                   />
                   <h3 className="text-lg font-semibold hover:text-blue-500 mb-2">
                     {news.title}

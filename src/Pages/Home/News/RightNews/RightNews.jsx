@@ -27,9 +27,9 @@ const RightNews = () => {
   ];
 
   return (
-    <div className="w-1/4">
+    <div className="w-full lg:w-1/4">
       <div className="pb-2 border-b">
-        <img src={def} className="w-{300px} h-{250px}" />
+        <img src={def} className="w-full lg:w-72 lg:h-56" />
       </div>
       {newsItems.map((item, index) => (
         <div
@@ -55,7 +55,7 @@ const RightNews = () => {
       ))}
       <div>
         {" "}
-        <img src={def} className="w-{300px} h-{250px}" />
+        <img src={def} className="w-full lg:w-72 lg:h-56" />
       </div>
     </div>
   );

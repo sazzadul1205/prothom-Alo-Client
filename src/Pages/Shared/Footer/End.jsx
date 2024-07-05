@@ -1,5 +1,3 @@
-import React from "react";
-
 const End = () => {
   return (
     <footer className="footer footer-center text-black p-4 text-sm font-light">
@@ -9,5 +7,4 @@ const End = () => {
     </footer>
   );
 };
-
 export default End;

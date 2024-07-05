@@ -3,14 +3,14 @@ import News2 from "../../../assets/imgNews/News6.png";
 
 const KnowMore = () => {
   return (
-    <div className="bg-white  flex justify-center ">
-      <div className="w-[1311px] py-10 border-b-4 border-gray-300">
-        <div className="grid grid-cols-2 gap-2 mx-auto">
-          <a href="">
-            <img src={News1} alt="" />
+    <div className="bg-white py-10">
+      <div className="max-w-screen-xl mx-auto px-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <a href="#" className="block">
+            <img src={News1} alt="News 1" className="w-full object-cover rounded-lg" />
           </a>
-          <a href="">
-            <img src={News2} alt="" />
+          <a href="#" className="block">
+            <img src={News2} alt="News 2" className="w-full object-cover rounded-lg" />
           </a>
         </div>
       </div>

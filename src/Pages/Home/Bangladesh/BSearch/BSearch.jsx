@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import { FaLocationCrosshairs } from "react-icons/fa6";
 
@@ -255,14 +255,14 @@ const BSearch = () => {
   };
 
   return (
-    <div className="bg-[#F3F2FD] grid grid-cols-5 h-20 gap-5">
+    <div className="bg-[#F3F2FD] grid grid-cols-1 md:grid-cols-5 gap-5 h-auto md:h-20 p-5 md:p-0">
       <div className="flex justify-center items-center">
         <FaLocationCrosshairs className="text-red-500 mr-5" />
         <h1>আমার এলাকার খবর</h1>
       </div>
       <div>
         <select
-          className="select select-bordered w-full max-w-xs bg-blue-200 mt-5"
+          className="select select-bordered w-full max-w-xs bg-blue-200 mt-5 md:mt-4"
           value={selectedDivision}
           onChange={handleDivisionChange}
         >
@@ -276,7 +276,7 @@ const BSearch = () => {
       </div>
       <div>
         <select
-          className="select select-bordered w-full max-w-xs bg-blue-200 mt-5"
+          className="select select-bordered w-full max-w-xs bg-blue-200 mt-5 md:mt-4"
           value={selectedDistrict}
           onChange={handleDistrictChange}
           disabled={!selectedDivision}
@@ -291,7 +291,7 @@ const BSearch = () => {
       </div>
       <div>
         <select
-          className="select select-bordered w-full max-w-xs bg-blue-200 mt-5"
+          className="select select-bordered w-full max-w-xs bg-blue-200 mt-5 md:mt-4"
           disabled={!selectedDistrict}
         >
           <option value="">উপজেলা</option>
@@ -303,7 +303,7 @@ const BSearch = () => {
         </select>
       </div>
       <div>
-        <button className="btn btn-active btn-primary mt-5 text-white px-10">
+        <button className="btn btn-active btn-primary mt-5 md:mt-0 text-white px-10 w-full">
           <FaSearch /> খুঁজুন
         </button>
       </div>

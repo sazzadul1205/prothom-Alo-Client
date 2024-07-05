@@ -67,9 +67,9 @@ const article = [
 
 const SportsLeft = () => {
   return (
-    <div className="w-1/4">
+    <div className="w-full lg:w-1/4">
       <Tabs className="border-t-4 border-gray-400 py-5">
-        <TabList className="border-black grid grid-cols-3">
+        <TabList className="border-black grid grid-cols-1 lg:grid-cols-3">
           {article.map((tab, index) => (
             <Tab
               key={index}

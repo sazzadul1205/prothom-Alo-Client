@@ -82,7 +82,7 @@ const MiddleBottomNews = [
 
 const MiddleNews = () => {
   return (
-    <div className="w-2/4">
+    <div className="w-full lg:w-2/4">
       {/* Top News */}
       <div>
         {MiddleTopNews.map((news) => (
@@ -103,12 +103,12 @@ const MiddleNews = () => {
       </div>
       {/* Middle Top News */}
       <div className="border-b py-4">
-        <div className="grid grid-cols-2">
+        <div className="grid grid-cols-1 md:grid-cols-2">
           {MiddleMiddleTopNews.map((news, index) => (
             <div
               key={news.id}
               className={`px-2 ${
-                index !== MiddleMiddleTopNews.length - 1 ? "border-r" : ""
+                index !== MiddleMiddleTopNews.length - 1 ? "md:border-r" : ""
               }`}
             >
               <div className="flex items-center justify-between">
@@ -127,11 +127,11 @@ const MiddleNews = () => {
       </div>
       {/* Middle bottom News */}
       <div className="border-b py-3">
-        <div className="grid grid-cols-3">
+        <div className="grid grid-cols-1 md:grid-cols-3">
           {MiddleMiddleBottomNews.map((news, index) => (
             <div
               key={news.id}
-              className={`pl-2 ${index % 3 !== 2 ? "border-r" : ""}`}
+              className={`pl-2 ${index % 3 !== 2 ? "md:border-r" : ""}`}
             >
               <img src={news.imageUrl} alt="" />
               <h3 className="font-bold hover:text-blue-400">{news.title}</h3>
@@ -143,11 +143,11 @@ const MiddleNews = () => {
 
       {/* Bottom News */}
       <div>
-        <div className="grid grid-cols-3 gap-4 py-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 py-4">
           {MiddleBottomNews.map((news, index) => (
             <div
               key={news.id}
-              className={`pl-2 ${index % 3 !== 2 ? "border-r" : ""}`}
+              className={`pl-2 ${index % 3 !== 2 ? "md:border-r" : ""}`}
             >
               <h3 className="font-bold hover:text-blue-400 mb-2">
                 {news.title}

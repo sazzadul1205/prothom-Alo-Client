@@ -67,23 +67,24 @@ const Paper2RightNews = [
     time: 3,
   },
 ];
+
 const Paper = () => {
   return (
     <div className="bg-white w-full text-black py-4 mt-5">
       <div className="max-w-screen-xl mx-auto">
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {/* left paper */}
           <div className="bg-[#ECEFF1]">
             <img src={paper1} alt="" className="w-full" />
-            <div className="flex">
+            <div className="flex flex-col md:flex-row">
               {/* left-left */}
-              <div className=" w-2/4 my-2">
+              <div className="md:w-2/4 my-2">
                 {paper1leftNews.map((news) => (
                   <div
                     key={news.id}
-                    className="border-r border-gray-400 h-full p-4 "
+                    className="border-r border-gray-400 h-full p-4"
                   >
-                    <img src={news.imageUrl} alt="" className=" w-full mb-2" />
+                    <img src={news.imageUrl} alt="" className="w-full mb-2" />
                     <h3 className="text-lg font-semibold hover:text-blue-500 mb-2">
                       {news.title}
                     </h3>
@@ -95,7 +96,7 @@ const Paper = () => {
                 ))}
               </div>
               {/* left-right */}
-              <div className="w-2/4 px-2">
+              <div className="md:w-2/4 px-2">
                 {Paper1RightNews.map((item, index) => (
                   <div
                     key={item.id}
@@ -128,20 +129,20 @@ const Paper = () => {
             </div>
           </div>
           {/* Right paper */}
-          <div className="bg-[#FFF3E0] ">
+          <div className="bg-[#FFF3E0]">
             <img src={paper2} alt="Paper 2" className="w-full h-auto" />
-            <div className="flex">
+            <div className="flex flex-col md:flex-row">
               {/* Right-Left */}
-              <div className=" w-2/4 my-2">
+              <div className="md:w-2/4 my-2">
                 {paper2leftNews.map((news) => (
                   <div
                     key={news.id}
-                    className="border-r border-gray-400 h-full  p-4 "
+                    className="border-r border-gray-400 h-full p-4"
                   >
                     <img
                       src={news.imageUrl}
                       alt=""
-                      className=" object-cover mb-2"
+                      className="object-cover mb-2 w-full"
                     />
                     <h3 className="text-lg font-semibold hover:text-blue-500 mb-2">
                       {news.title}
@@ -154,12 +155,12 @@ const Paper = () => {
                 ))}
               </div>
               {/* Right-Right */}
-              <div className="w-2/4 px-4">
+              <div className="md:w-2/4 px-4">
                 {Paper2RightNews.map((item, index) => (
                   <div
                     key={item.id}
                     className={` ${
-                      index === Paper1RightNews.length - 1
+                      index === Paper2RightNews.length - 1
                         ? ""
                         : "border-b border-gray-400"
                     } px-2 py-5`}

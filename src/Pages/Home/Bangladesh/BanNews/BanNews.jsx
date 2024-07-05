@@ -54,15 +54,18 @@ const BanRightNews = [
 
 const BanNews = () => {
   return (
-    <div className="grid grid-cols-3 mt-5">
-      {/* left */}
-      <div className="border-r border-black">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-5">
+      {/* Left */}
+      <div className="md:border-r md:border-black p-2 md:p-0">
         {BanLeftNews.map((news) => (
-          <div key={news.id} className="border-r border-gray-200 rounded p-4">
+          <div
+            key={news.id}
+            className=" md:border-gray-200 rounded p-4 mb-4"
+          >
             <img
               src={news.imageUrl}
               alt=""
-              className="w-[442px] h-[352px] object-cover mb-2"
+              className="w-full h-64 object-cover mb-2"
             />
             <h3 className="text-lg font-semibold hover:text-blue-500 mb-2">
               {news.title}
@@ -72,8 +75,9 @@ const BanNews = () => {
           </div>
         ))}
       </div>
-      {/*  Middle */}
-      <div className="border-r border-black px-2">
+
+      {/* Middle */}
+      <div className="md:border-r md:border-black px-2 md:px-0">
         {BanMiddleNews.map((item, index) => (
           <div
             key={item.id}
@@ -83,9 +87,9 @@ const BanNews = () => {
             }}
             className="p-2 mb-2"
           >
-            <div className="flex items-start justify-between">
+            <div className="flex flex-col md:flex-row items-start justify-between">
               <div className="flex flex-1">
-                <h3 className="font-bold hover:text-blue-400 mt-3">
+                <h3 className="font-bold hover:text-blue-400 mt-3 md:mt-0">
                   {item.title}
                 </h3>
               </div>
@@ -93,7 +97,7 @@ const BanNews = () => {
                 <img
                   src={item.imageUrl}
                   alt={item.title}
-                  className="w-[155px] ml-2"
+                  className="w-full md:w-40 ml-0 md:ml-2 mt-2 md:mt-0"
                 />
               )}
             </div>
@@ -103,12 +107,12 @@ const BanNews = () => {
         ))}
       </div>
 
-      {/* Left */}
+      {/* Right */}
       <div>
-        <div className="w-[300px] border-l-3 border-black px-2">
+        <div className="md:border-l-3 md:border-black px-2">
           {BanRightNews.map((item) => (
             <div key={item.id} className="mt-2 border-b px-2 pb-5 pt-2">
-              <div className="flex items-center justify-between">
+              <div className="flex flex-col md:flex-row items-center justify-between">
                 <div className="flex">
                   <h3 className="font-bold hover:text-blue-400">
                     {item.title}
@@ -118,7 +122,7 @@ const BanNews = () => {
                   <img
                     src={item.imageUrl}
                     alt={item.title}
-                    className="w-28 ml-4"
+                    className="w-full md:w-28 ml-0 md:ml-4 mt-2 md:mt-0"
                   />
                 )}
               </div>
@@ -126,7 +130,7 @@ const BanNews = () => {
           ))}
         </div>
         <div>
-          <img src={def} className="w-[300px] h-[250px] my-5" />
+          <img src={def} className="w-full md:w-[300px] h-64 my-5" />
         </div>
       </div>
     </div>
